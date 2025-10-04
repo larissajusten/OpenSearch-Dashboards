@@ -12,6 +12,7 @@
 
 const THEME_MODES = ['light', 'dark'];
 const THEME_VERSION_LABEL_MAP = {
+  ponyo: 'Ponyo (preview)',
   v7: 'v7',
   v8: 'Next (preview)',
   v9: 'v9 (preview)',

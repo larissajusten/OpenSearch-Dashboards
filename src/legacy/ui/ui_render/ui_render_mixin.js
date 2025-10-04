@@ -35,6 +35,8 @@ import * as v7light from '@elastic/eui/dist/eui_theme_light.json';
 import * as v7dark from '@elastic/eui/dist/eui_theme_dark.json';
 import * as v8light from '@elastic/eui/dist/eui_theme_next_light.json';
 import * as v8dark from '@elastic/eui/dist/eui_theme_next_dark.json';
+import * as ponyoLight from '@elastic/eui/dist/eui_theme_ponyo_light.json';
+import * as ponyoDark from '@elastic/eui/dist/eui_theme_ponyo_dark.json';
 import * as v9light from '@elastic/eui/dist/eui_theme_v9_light.json';
 import * as v9dark from '@elastic/eui/dist/eui_theme_v9_dark.json';
 import * as UiSharedDeps from '@osd/ui-shared-deps';
@@ -246,6 +248,10 @@ export function uiRenderMixin(osdServer, server, config) {
           light: getLoadingVars(v9light),
           dark: getLoadingVars(v9dark),
         },
+        ponyo: {
+          light: getLoadingVars(ponyoLight),
+          dark: getLoadingVars(ponyoDark),
+        },
       });
 
       /*
@@ -256,12 +262,14 @@ export function uiRenderMixin(osdServer, server, config) {
         v7: 'Inter UI',
         v8: 'Source Sans 3',
         v9: 'Rubik',
+        ponyo: 'Rubik',
       });
 
       const fontCode = JSON.stringify({
         v7: 'Roboto Mono',
         v8: 'Source Code Pro',
         v9: 'Source Code Pro',
+        ponyo: 'Rubik',
       });
 
       const startup = new AppBootstrap(
